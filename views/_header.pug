@@ -1,0 +1,25 @@
+header.header
+  nav#mainNav.navbar.navbar-expand-lg.navbar-light
+    if(user&&user.role === "poster")
+       a.nav__el.navMainButtonText.navbar-brand(href='/posts') All Posts
+       a.nav__el.navMainButtonText.navbar-brand(href='/posts/me') My Posts
+       a.nav__el.navMainButtonText.navbar-brand(href='/posts/new') New Post
+    if(user&&user.role === "admin")  
+       a.nav__el.navMainButtonText.navbar-brand(href='/posts') All Posts
+       a.nav__el.navMainButtonText.navbar-brand(href='/users') All users
+    button#toggler-btn.navbar-toggler.btn(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+      span#clpse-icon.fa.fa-bars
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.ml-auto
+        if user
+          a.nav__el.nav__el--logout.nav-item.nav-link.navButtonText(href="#") Log Out
+          a.nav-item.nav-link.navButtonText.nav-user(aria-disabled="true")
+            if(user&&user.role === "admin")  
+              img.img-fluid.nav__user-img(src=`/img/admin.jpg` alt=`Photo of ${user.name}`)
+            if(user&&user.role !== "admin")  
+              img.img-fluid.nav__user-img(src=`/img/normal.jpg` alt=`Photo of ${user.name}`)
+            span= user.name
+        else
+          a.nav__el.nav-item.nav-link.navButtonText(href='/login') Log in
+          a.nav__el.nav-item.nav-link.navButtonText(href='/signup') Sign up
+

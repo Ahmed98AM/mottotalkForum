@@ -1,0 +1,20 @@
+mixin commentCard(comment)
+  if comment.liked===true
+    .card.col-sm-6.col-md-3.comments-cards.liked-card
+      .card-body
+        .card-header 
+            .title= comment.user.name
+              if user&&((JSON.stringify(comment.user._id)===JSON.stringify(user._id)))
+                a.fa.fa-remove.btn-del-comment(href="#" data-commentId= comment._id)
+        .card-content= comment.comment
+        .card-date= `${comment.createdAt.toLocaleString('en-US', { hour12: false })}`
+  else if comment.liked===false
+    .card.col-sm-6.col-md-3.comments-cards.disLiked-card 
+      .card-body
+        .card-header 
+            .title= comment.user.name
+              if user&&(JSON.stringify(comment.user._id)===JSON.stringify(user._id))
+                a.fa.fa-remove.btn-del-comment(href="#" data-commentId= comment._id)
+        .card-content= comment.comment
+        .card-date= `${comment.createdAt.toLocaleString('en-US', { hour12: false })}`
+    

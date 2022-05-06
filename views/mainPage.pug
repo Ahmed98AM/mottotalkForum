@@ -1,0 +1,25 @@
+extends base
+
+block content
+  .jumbotron.main-page
+    a.display-2(href='/posts' role="button") Welcome to our Mottotalk Forum  
+    if(!user)
+      .lead.main-page-lead Login to our forum and share your opinions on others' posts, or even publish yours.
+      .lead
+        form.form.form--login
+          .form__group
+            input#email.form__input(type='email', placeholder='you@example.com', required)
+          .form__group
+            input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+          .form__group
+            button.btn.login-submit-btn  Login
+          a.btn.signup-btn(href='/signup' role="button") Create a new account
+    else if(user)
+      .lead 
+        a.btn.showPosts-btn(href='/posts' role="button") Show Posts
+        if(user.role==="admin")
+          a.btn.showUsers-btn(href='/users' role="button") Show users
+
+
+
+

@@ -1,0 +1,14 @@
+extends base
+include _commentCard
+
+block content
+  .post-page
+    .card.section-post.post-card
+      img.img-fluid.card-img-top(src=`/img/${post.cover}`, alt=`${post.title}`)
+      p.card-text= post.desc
+    .container-fluid.section-comments
+      .row.flex-nowrap
+        .col-sm-6.col-md-3.d-flex.justify-content-center.comments-cards.btn-add-comment
+          a.btn.fa.fa-plus(href=`/posts/${post._id}/newComment`)     
+        each comment in post.comments  
+          +commentCard(comment)

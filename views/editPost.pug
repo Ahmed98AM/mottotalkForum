@@ -1,0 +1,17 @@
+extends base
+
+block content
+  main.main
+    .jumbotron.edit-post-page
+      .container
+        .newPost-form
+          form.form.form--editPost
+            .form__group.coverImg-section
+              label.form__label(for='post-cover') Browse Cover Img 
+              input#post-cover.form-control(type='file',accept= "image/*", name="cover") 
+            .form__group
+              input#post-title.form-control(type='text',placeholder="Enter Post Title",value=post.title, required) 
+            .form__group
+              textarea#post-desc.form-control(rows="3",data-postId=post._id,type='text',placeholder="Enter Post Description" required)= post.desc
+            .form__group
+              button.btn.post-submit-btn  Edit Post          

@@ -1,0 +1,14 @@
+extends base
+
+block content
+  main.main
+    .jumbotron.loginForm-page
+      .container
+        .login-form
+          form.form.form--login
+            .form__group
+              input#email.form-control(type='email', placeholder='you@example.com', required)
+            .form__group
+              input#password.form-control(type='password', placeholder='••••••••', required, minlength='8')
+            .form__group
+              button.btn.btn.login-submit-btn Login

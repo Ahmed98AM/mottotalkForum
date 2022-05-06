@@ -1,0 +1,15 @@
+extends base
+
+block content
+  main.main
+    .container.users-page 
+      .row  
+        each u in users
+          if(JSON.stringify(u._id)!==JSON.stringify(user._id))
+            .col-lg-12
+                .card.user-cards
+                  .card-body
+                    .card-title                
+                      span= u.name
+                    p.card-content= u.email
+                    a.btn.card-link.btn-del-user#btn-del(data-userId=u._id) Delete

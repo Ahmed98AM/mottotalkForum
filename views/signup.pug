@@ -1,0 +1,25 @@
+extends base
+
+block content
+  main.main
+    .jumbotron.signUpForm-page
+      .container
+        .signUp-form
+          .signUp-form
+            form.form.form--signup
+              .form__group
+                input#name.form-control(type='text', placeholder='your name', required)
+              .form__group
+                input#email.form-control(type='email', placeholder='you@example.com', required)
+              .form__group
+                input#password.form-control(type='password', placeholder='••••••••', required, minlength='8')
+              .form__group.ma-bt-md
+                input#passwordConfirm.form-control(type='password', placeholder='••••••••', required, minlength='8')
+              .form__group.ma-bt-md
+                select#role.form-control(type='text')
+                  option#role.form-control(value='poster')
+                    | poster
+                  option#role.form-control(value='admin')
+                    | Admin
+              .form__group
+                button.btn.signUp-submit-btn Sign Up
