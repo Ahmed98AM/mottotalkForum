@@ -38,7 +38,6 @@ export const login = async (email, password) => {
 
     if (res.data.status === "success") {
       showAlert("success", "Logged in successfully!");
-      alert(document.referrer);
       if (document.referrer.includes("new")) window.history.back();
       else location.assign("/");
     }
