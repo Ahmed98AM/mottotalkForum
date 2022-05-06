@@ -6,7 +6,7 @@ block content
         .row     
           each post in posts
             -if(user&&post.poster&&JSON.stringify(user._id)===JSON.stringify(post.poster._id))  
-              .col-lg-3.col-md-3.col-sm-6
+              .col-lg-3.col-md-6.col-sm-6
                 .card.imgsContainer.cardImgs.mr-3.mb-5 
                   img.card__picture-img.card-img-top.bd-placeholder-img(src=`/img/${post.cover}`, alt=`${post.title}`)
                   .card-body
@@ -17,7 +17,7 @@ block content
                     a.btn.btn--green.btn--small.btn-del-post#btn-del(data-postId=post._id) Delete
                     a.btn.btn--green.btn--small(href=`/posts/${post._id}`) Details
             -if(user&&post.poster&&JSON.stringify(user._id)!==JSON.stringify(post.poster._id))  
-              .col-lg-3.col-md-3.col-sm-6
+              .col-lg-3.col-md-6.col-sm-6
                 .card.imgsContainer.cardImgs.mr-3.mb-5  
                   img.card__picture-img.card-img-top.bd-placeholder-img(src=`/img/${post.cover}`, alt=`${post.title}`)
                   .card-body
@@ -28,7 +28,7 @@ block content
                       a.btn.btn--green.btn--small.btn-del-post#btn-del(data-postId=post._id) Delete
                     a.btn.btn--green.btn--small(href=`/posts/${post._id}`) Details
             -if(!user)  
-              .col-lg-3.col-md-3.col-sm-6
+              .col-lg-3.col-md-6.col-sm-6
                 .card.imgsContainer.cardImgs.mr-3.mb-5  
                   img.card__picture-img.card-img-top.bd-placeholder-img(src=`/img/${post.cover}`, alt=`${post.title}`)
                   .card-body

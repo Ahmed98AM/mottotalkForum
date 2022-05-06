@@ -2,6 +2,7 @@ import "@babel/polyfill";
 import { signUp, login, logout } from "./login";
 import { newPost, newComment } from "./addItems";
 import { editPost, deletePost, deleteComment, deleteUser } from "./editItems";
+import { showAlert } from "./alerts";
 
 const mainPage = document.querySelector(".main-page");
 const postsPage = document.querySelector(".posts-page");
@@ -55,6 +56,7 @@ if (newPostForm)
     document.getElementById("post-cover").files[0]
       ? form.append("cover", document.getElementById("post-cover").files[0])
       : form.append("cover", "default-post.jpg");
+    showAlert("success", "Cover Image is probably uploading please wait!");
     newPost(form, "data");
   });
 if (newCommentForm) {
