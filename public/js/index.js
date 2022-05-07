@@ -91,6 +91,7 @@ if (editPostForm) {
     const postId = document
       .getElementById("post-desc")
       .getAttribute("data-postId");
+    showAlert("success", "Cover Image is probably uploading please wait!");
     editPost(form, postId);
   });
 }
