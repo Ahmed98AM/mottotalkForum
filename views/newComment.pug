@@ -9,9 +9,9 @@ block content
               .form__group.justify-content-center
                 textarea#comment-content.form-control(type='text',data-postId= postId,data-userId=user._id,required)
                 .container
-                  .row.like-dislike-div
-                    .col-sm-6.p-0.d-flex.justify-content-center
+                  .like-dislike-container
+                    .p-0.d-flex.justify-content-center.like-dislike-div
                       button.liked-btn(type="button") Liked
-                    .col-sm-6.p-0.d-flex.justify-content-center
+                    .p-0.d-flex.justify-content-center.like-dislike-div
                       button.disLiked-btn(type="button") Disliked
                 button.btn.comment-submit-btn Add Comment

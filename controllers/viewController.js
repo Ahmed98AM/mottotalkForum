@@ -10,7 +10,7 @@ exports.showMainPage = (req, res) => {
 };
 exports.showSignupForm = catchAsync(async (req, res, next) => {
   res.status(200).render("signup", {
-    title: "Sign up",
+    title: "Sign Up",
   });
 });
 exports.showLoginForm = catchAsync(async (req, res, next) => {
@@ -20,14 +20,14 @@ exports.showLoginForm = catchAsync(async (req, res, next) => {
 });
 exports.showNewPostForm = catchAsync(async (req, res, next) => {
   res.status(200).render("newPost", {
-    title: "Submit a post",
+    title: "Add Post",
   });
 });
 exports.showEditPostForm = catchAsync(async (req, res, next) => {
   try {
     const foundPost = await Post.findById(req.params.id);
     res.status(200).render("editPost", {
-      title: "Edit a post",
+      title: "Edit Post",
       post: foundPost,
     });
   } catch (err) {
@@ -36,7 +36,7 @@ exports.showEditPostForm = catchAsync(async (req, res, next) => {
 });
 exports.showNewCommentForm = catchAsync(async (req, res, next) => {
   res.status(200).render("newComment", {
-    title: "Submit a Comment",
+    title: "Submit Comment",
     postId: req.params.postId,
   });
 });

@@ -65,10 +65,14 @@ if (newCommentForm) {
   const disLiked_btn = document.querySelector(".disLiked-btn");
   liked_btn.addEventListener("click", (e) => {
     e.preventDefault();
+    liked_btn.classList.add("liked-btn-clicked");
+    disLiked_btn.classList.remove("disLiked-btn-clicked");
     liked = true;
   });
   disLiked_btn.addEventListener("click", (e) => {
     e.preventDefault();
+    disLiked_btn.classList.add("disLiked-btn-clicked");
+    liked_btn.classList.remove("liked-btn-clicked");
     liked = false;
   });
   newCommentForm.addEventListener("submit", (e) => {

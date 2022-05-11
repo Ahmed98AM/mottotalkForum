@@ -105,11 +105,12 @@ body {
   text-align: center;
   margin-top: 10em;
 }
-.main-page .display-2 {
+.main-page .header-title {
   color: #9857d8;
+  font-size: 5em;
   text-shadow: 0.03em 0.03em 0 rgba(232, 233, 233);
 }
-.main-page .display-2:hover {
+.main-page .header-title:hover {
   color: #9857d8;
   text-shadow: 0.05em 0.05em 0 rgba(232, 233, 233);
   text-decoration: none;
@@ -157,7 +158,7 @@ body {
   padding-left: 0.5em;
   height: 2em;
   width: 30%;
-  margin: 0.5em;
+  margin-bottom: 0.5em;
   border: none !important;
   border-radius: 0 !important;
 }
@@ -348,11 +349,15 @@ body {
   width: 90%;
   margin: auto;
 }
-.like-dislike-div {
-  /* position: relative; */
+.like-dislike-container {
+  text-align: center;
   margin-top: 2em !important;
 }
-
+.like-dislike-div {
+  width: 50%;
+  float: right;
+  margin-bottom: 2em;
+}
 .liked-btn,
 .disLiked-btn {
   width: 80%;
@@ -371,9 +376,7 @@ body {
   color: #ff0059;
   box-shadow: 0.5rem 0.5rem #ff0059 !important;
 }
-.liked-btn:hover,
-.liked-btn:active,
-.liked-btn:focus {
+.liked-btn-clicked {
   background-color: #00ff80;
   color: #e8e9e9;
   top: 0.5rem;
@@ -381,9 +384,23 @@ body {
   outline: none !important;
   box-shadow: none !important;
 }
-.disLiked-btn:hover,
-.disLiked-btn:active,
-.disLiked-btn:focus {
+.liked-btn:hover {
+  background-color: #00ff80;
+  color: #e8e9e9;
+  top: 0.5rem;
+  left: 0.5rem;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.disLiked-btn:hover {
+  background-color: #ff0059;
+  color: #e8e9e9;
+  top: 0.5rem;
+  left: 0.5rem;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.disLiked-btn-clicked {
   background-color: #ff0059;
   color: #e8e9e9;
   top: 0.5rem;
@@ -449,6 +466,9 @@ body {
   top: 0.5rem;
   left: 0.5rem;
   box-shadow: none !important;
+}
+.comments-cards .card-header {
+  padding: 0 !important;
 }
 .comments-cards .card-header .title {
   font-size: 2em;
@@ -576,4 +596,43 @@ body {
 }
 .users-page .btn-del-user:hover {
   color: #e8e9e9 !important;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 768px) {
+  #mainNav .navMainButtonText {
+    font-size: 1.2em !important;
+  }
+  .main-page .header-title {
+    font-size: 2em;
+  }
+  .main-page .main-page-lead {
+    font-size: 1em;
+    margin-top: 3em;
+  }
+  .main-page #email,
+  .main-page #password,
+  .main-page .login-submit-btn {
+    width: 100%;
+  }
+  .main-page .form--login .signup-btn {
+    font-size: 0.5em;
+  }
+  .btn-add-comment a {
+    padding: 2.5em;
+  }
+  .comments-cards {
+    min-width: 40% !important;
+  }
+  .comments-cards .card-header .title {
+    font-size: 0.8em;
+  }
+  .comments-cards .card-content {
+    font-size: 0.6em;
+  }
+  .comments-cards .card-date {
+    font-size: 0.3em;
+  }
+  .comment-submit-btn {
+    margin-top: 10em;
+  }
 }
