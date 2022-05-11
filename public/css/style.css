@@ -595,6 +595,9 @@ body {
   #mainNav .navMainButtonText {
     font-size: 1.2em !important;
   }
+  .main-page {
+    margin-top: 5em;
+  }
   .main-page .header-title {
     font-size: 2em;
   }
@@ -605,7 +608,7 @@ body {
   .main-page #email,
   .main-page #password,
   .main-page .login-submit-btn {
-    width: 100%;
+    width: 60%;
   }
   .main-page .form--login .signup-btn {
     font-size: 0.5em;
