@@ -630,14 +630,10 @@ body {
   }
   .main-page .showPosts-btn,
   .main-page .showUsers-btn {
-    margin-top: 5em !important;
-    margin-left: 2em !important;
-    margin-right: 2em !important;
-    font-size: 1em;
-    border-radius: 0;
-    width: 5em;
-    color: #e8e9e9 !important;
-    box-shadow: 0.5rem 0.5rem #9857d8, -0.5rem -0.5rem #e8e9e9 !important;
-    justify-content: center;
+    margin-top: 10em !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+    font-size: 0.9em;
+    width: 6em;
   }
 }
