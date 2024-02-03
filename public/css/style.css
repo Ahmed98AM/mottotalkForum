@@ -72,7 +72,8 @@ body {
   outline: 0;
 }
 .navbar-brand:hover {
-  border-bottom: 0.1em solid #9857d8;
+  /* border-bottom: 0.1em solid #9857d8; */
+  color: #9857d8 !important;
 }
 .navMainButtonText {
   font-size: 1.5em !important;
@@ -321,9 +322,9 @@ body {
   box-shadow: 0.5rem 0.5rem #9857d8, -0.5rem -0.5rem black !important;
 }
 .section-post img:hover {
-  padding-top: 0.5rem;
+  /* padding-top: 0.5rem;
   padding-left: 0.5rem;
-  box-shadow: none !important;
+  box-shadow: none !important; */
 }
 .section-post p {
   margin-top: 2em;
